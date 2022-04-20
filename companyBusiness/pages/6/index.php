@@ -60,13 +60,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="buttonwhatsapp__fixed position-fixed">
-				<a class="d-flex align-items-center colorsocial wh rounded-pill px-4 py-3" href="https://wa.me/1XXXXXXXXXX">
-					<i class="fab fa-whatsapp mr-2 font-20"></i> تحدث الينا واتساب </a>
-			</div>
+
 
 	</aside>
-
+	<?php include "common/footer.php" ?>
 </body>
 
 </html>
