@@ -63,7 +63,7 @@
 
   <div id="Interior" class="tabcontent">
     <h3 class="text-center">Interior Design</h3>
-    <form method="POST" action="server/interiorDesignAction.php" enctype="multipart/form-data">
+    <form method="POST" action="server/interiordesign/interiorDesignAction.php" enctype="multipart/form-data">
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Land area square meters</label>
         <input type="number" name="landarea" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Area Square Meters">
@@ -99,9 +99,9 @@
         </select>
       </div>
       <div class="form-group text-center">
-        <input type="file" name="file">
-        <input type="file" name="file2">
-
+        <input type="file" name="file"><span>Enigineering Diagram</span>
+        <br>
+        <input type="file" name="file2" class="mt-2"><span>Other Attachment</span>
       </div>
 
       <div class="form-group text-center">
@@ -115,14 +115,14 @@
 
   <div id="Sort" class="tabcontent">
     <h3 class="text-center">Sort</h3>
-    <form>
+    <form method="POST" action="server/sort/sortAction.php" enctype="multipart/form-data">
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Land area square meters</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Area Square Meters">
+        <input type="text" name="landarea" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Area Square Meters">
       </div>
       <div class="form-group w-50 m-auto">
         <label for="inputState">Service Type</label>
-        <select id="inputState" class="form-control">
+        <select id="inputState" name="servicetype" class="form-control">
           <option selected>Choose...</option>
           <option>Duplex Sorting</option>
           <option>Land Sort</option>
@@ -132,60 +132,47 @@
       </div>
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Mobile Number</label>
-        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mobile Number">
+        <input type="number" name="mobilenumber" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mobile Number">
       </div>
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
       </div>
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Customer Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Customer Name">
+        <input type="text" name="customername" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Customer Name">
       </div>
-      <div class="form-group w-50 m-auto">
-        <label for="inputState">Design Type</label>
-        <select id="inputState" class="form-control">
-          <option selected>Choose...</option>
-          <option>Modern</option>
-          <option>Classic</option>
-        </select>
-      </div>
+
       <div class="form-group text-center">
-        <label for="myfile">License Photo</label>
-        <input type="file" id="myfile" name="myfile">
+        <input type="file" name="file"><span>License Photo</span>
+        <br>
+        <input type="file" name="file2" class="mt-2"><span>Picture of the Insrument</span>
+        <br>
+        <input type="file" name="file3" class="mt-2"><span>Owner ID - Commercial Register</span>
+        <br>
+        <input type="file" name="file4" class="mt-2"><span>Engineering Diagram</span>
       </div>
-      <div class="form-group  text-center">
-        <label for="myfile">Picture of the instrument</label>
-        <input type="file" id="myfile" name="myfile">
-      </div>
-      <div class="form-group  text-center">
-        <label for="myfile">Owner ID - Commercial Register</label>
-        <input type="file" id="myfile" name="myfile">
-      </div>
-      <div class="form-group  text-center">
-        <label for="myfile">Engineering diagram</label>
-        <input type="file" id="myfile" name="myfile">
-      </div>
+
 
       <div class="form-group text-center">
         <textarea id=" w3review" name="note" rows="5" cols="100" placeholder="Enter your note" class="text-center"></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary col-md-12">Submit</button>
+      <input type="submit" name="submit" class="btn btn-primary col-md-12" value="submit" />
 
     </form>
   </div>
 
   <div id="Design" class="tabcontent">
     <h3 class="text-center">Design</h3>
-    <form>
+    <form method="POST" action="server/design/designAction.php" enctype="multipart/form-data">
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Land area square meters</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Area Square Meters">
+        <input type="text" name="landarea" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Area Square Meters">
       </div>
       <div class="form-group w-50 m-auto">
         <label for="inputState">Service Type</label>
-        <select id="inputState" class="form-control">
+        <select id="inputState" name="servicetype" class="form-control">
           <option selected>Choose...</option>
           <option>Villa</option>
           <option>Duplex</option>
@@ -199,53 +186,39 @@
       </div>
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Mobile Number</label>
-        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mobile Number">
+        <input type="number" name="mobilenumber" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mobile Number">
       </div>
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
       </div>
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Customer Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Customer Name">
-      </div>
-      <div class="form-group w-50 m-auto">
-        <label for="inputState">Design Type</label>
-        <select id="inputState" class="form-control">
-          <option selected>Choose...</option>
-          <option>Modern</option>
-          <option>Classic</option>
-        </select>
-      </div>
-      <div class="form-group  text-center">
-        <label for="myfile">Engineering diagram</label>
-        <input type="file" id="myfile" name="myfile">
+        <input type="text" name="customername" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Customer Name">
       </div>
 
-      <div class="form-group  text-center">
-        <label for="myfile">Picture of the instrument</label>
-        <input type="file" id="myfile" name="myfile">
-      </div>
-      <div class="form-group  text-center">
-        <label for="myfile">Owner ID - Commercial Register</label>
-        <input type="file" id="myfile" name="myfile">
+      <div class="form-group text-center">
+        <input type="file" name="file" class="mt-2"><span>Engineering Diagram</span>
+        <br>
+        <input type="file" name="file2" class="mt-2"><span>Picture of the Insrument</span>
+        <br>
+        <input type="file" name="file3" class="mt-2"><span>Owner ID - Commercial Register</span>
       </div>
 
       <div class="form-group text-center">
         <textarea id=" w3review" name="note" rows="5" cols="100" placeholder="Enter your note" class="text-center"></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary col-md-12">Submit</button>
-
+      <input type="submit" name="submit" class="btn btn-primary col-md-12" value="submit" />
     </form>
   </div>
 
   <div id="Cadastral" class="tabcontent">
     <h3 class="text-center">Cadastral Works</h3>
-    <form>
+    <form method="POST" action="server/cadastralWorks/cadastralWorksAction.php" enctype="multipart/form-data">
       <div class="form-group w-50 m-auto">
         <label for="inputState">Service Type</label>
-        <select id="inputState" class="form-control">
+        <select id="inputState" name="servicetype" class="form-control">
           <option selected>Choose...</option>
           <option>Raise Surveyos</option>
           <option>Instruments Update</option>
@@ -258,43 +231,38 @@
       </div>
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Mobile Number</label>
-        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mobile Number">
+        <input type="number" name="mobilenumber" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mobile Number">
       </div>
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
       </div>
       <div class="form-group w-50 m-auto">
         <label for="exampleInputEmail1">Customer Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Customer Name">
+        <input type="text" name="customername" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Customer Name">
       </div>
       <div class="form-group w-50 m-auto">
         <label for="inputState">Design Type</label>
-        <select id="inputState" class="form-control">
+        <select id="inputState" name="designtype" class="form-control">
           <option selected>Choose...</option>
           <option>Modern</option>
           <option>Classic</option>
         </select>
       </div>
-      <div class="form-group  text-center">
-        <label for="myfile">Engineering diagram</label>
-        <input type="file" id="myfile" name="myfile">
-      </div>
 
-      <div class="form-group  text-center">
-        <label for="myfile">Picture of the instrument</label>
-        <input type="file" id="myfile" name="myfile">
-      </div>
-      <div class="form-group  text-center">
-        <label for="myfile">Owner ID - Commercial Register</label>
-        <input type="file" id="myfile" name="myfile">
+      <div class="form-group text-center">
+        <input type="file" name="file" class="mt-2"><span>Engineering Diagram</span>
+        <br>
+        <input type="file" name="file2" class="mt-2"><span>Picture of the Insrument</span>
+        <br>
+        <input type="file" name="file3" class="mt-2"><span>Owner ID - Commercial Register</span>
       </div>
 
       <div class="form-group text-center">
         <textarea id=" w3review" name="note" rows="5" cols="100" placeholder="Enter your note" class="text-center"></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary col-md-12">Submit</button>
+      <input type="submit" name="submit" class="btn btn-primary col-md-12" value="submit" />s
 
     </form>
   </div>

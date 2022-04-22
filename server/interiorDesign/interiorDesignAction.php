@@ -1,6 +1,6 @@
 <?php
 // Include the database configuration file
-include 'dbConfig.php';
+include '../dbConfig.php';
 $statusMsg = '';
 
 // File upload path

@@ -27,7 +27,7 @@ include "./common/header.php";
               <p role="status" aria-live="polite" aria-atomic="true"></p>
               <ul></ul>
             </div>
-            <form action="/future-vision/site/contact/#wpcf7-f5-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+            <form method="POST" action="server/connectWithUs/connectWithUsAction.php" class="wpcf7-form init">
               <div style="display: none">
                 <input type="hidden" name="_wpcf7" value="5" />
                 <input type="hidden" name="_wpcf7_version" value="5.4" />
@@ -38,24 +38,24 @@ include "./common/header.php";
               </div>
               <div class="row row-p6 row-col">
                 <div class="col-md-6">
-                  <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control form-control-lg rounded-0" aria-required="true" aria-invalid="false" placeholder="الاسم" /></span>
+                  <span class="wpcf7-form-control-wrap your-name"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control form-control-lg rounded-0" aria-required="true" aria-invalid="false" placeholder="الاسم" /></span>
                 </div>
                 <div class="col-md-6">
-                  <span class="wpcf7-form-control-wrap your-phone"><input type="text" name="your-phone" value="" size="40" class="wpcf7-form-control wpcf7-text form-control form-control-lg rounded-0" aria-invalid="false" placeholder="رقم الجوال" /></span>
+                  <span class="wpcf7-form-control-wrap your-phone"><input type="text" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text form-control form-control-lg rounded-0" aria-invalid="false" placeholder="رقم الجوال" /></span>
                 </div>
                 <div class="col-md-6">
-                  <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control form-control-lg rounded-0" aria-required="true" aria-invalid="false" placeholder="البريد الإلكتروني" /></span>
+                  <span class="wpcf7-form-control-wrap your-email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control form-control-lg rounded-0" aria-required="true" aria-invalid="false" placeholder="البريد الإلكتروني" /></span>
                 </div>
                 <div class="col-md-6">
-                  <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text form-control form-control-lg rounded-0" aria-invalid="false" placeholder="العنوان" /></span>
+                  <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="address" value="" size="40" class="wpcf7-form-control wpcf7-text form-control form-control-lg rounded-0" aria-invalid="false" placeholder="العنوان" /></span>
                 </div>
                 <div class="col-md-12">
                   <span class="wpcf7-form-control-wrap your-message">
-                    <textarea name="your-message" cols="40" rows="5" class="wpcf7-form-control wpcf7-textarea form-control form-control-lg rounded-0" aria-invalid="false" placeholder="محتوي الرسالة"></textarea>
+                    <textarea name="message" cols="40" rows="5" class="wpcf7-form-control wpcf7-textarea form-control form-control-lg rounded-0" aria-invalid="false" placeholder="محتوي الرسالة"></textarea>
                   </span>
                 </div>
                 <div class="col-lg-12 mb-0">
-                  <input type="submit" value="ارسال الرسالة" class="wpcf7-form-control wpcf7-submit btn btn-outline-primary btn-lg btn-block rounded-0" />
+                  <input type="submit" name="submit" value="ارسال الرسالة" class="wpcf7-form-control wpcf7-submit btn btn-outline-primary btn-lg btn-block rounded-0" />
                 </div>
               </div>
               <div class="wpcf7-response-output" aria-hidden="true"></div>
@@ -64,11 +64,6 @@ include "./common/header.php";
         </div>
       </div>
     </div>
-  </div>
-  <div class="buttonwhatsapp__fixed position-fixed">
-    <a class="d-flex align-items-center colorsocial wh rounded-pill px-4 py-3" href="https://wa.me/1XXXXXXXXXX">
-      <i class="fab fa-whatsapp mr-2 font-20"></i> تحدث الينا واتساب
-    </a>
   </div>
 
 </aside>
