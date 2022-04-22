@@ -67,6 +67,7 @@ include "./common/header.php";
   </div>
 
 </aside>
+<iframe src="https://www.google.com/maps/d/embed?mid=17tkzmG8256_xUXDG5BYue1gZwRI&hl=en&ehbc=2E312F" width="1847" height="400" class="mb-5"></iframe>
 <?php
 include "./common/footer.php";
 ?>
